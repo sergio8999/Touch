@@ -9,13 +9,17 @@ function inicio() {
 
     if (window.DeviceOrientationEvent){
       window.addEventListener("deviceorientation", orientacion);
-  }
+    }
   }
 
   window.onload = inicio;
 
+  /**
+   * 
+   * @param {DeviceOrientationEvent} e 
+   */
   function orientacion(e){
-    document.getElementById("log").innerHTML = e.alpha;
+    document.getElementById("log").innerHTML = "Orientacion "+e.alpha;
   }
   function handleStart(evt) {
     evt.preventDefault();
