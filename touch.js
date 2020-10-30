@@ -34,5 +34,6 @@ function inicio() {
   }
 
   function orientacion(e){
-    document.getElementById("log").innerHTML = e.alpha;
+    document.getElementById("log").innerHTML = "Orientación del dispositivo:<br> Alpha: " + evt.alpha.toFixed(0) + "º, Beta: " + evt.beta.toFixed(0) + "º, Gamma: " + evt.gamma.toFixed(0) + "º";
+    //document.getElementById("log").innerHTML = e.alpha;
   }
