@@ -14,6 +14,10 @@ function inicio() {
 
   window.onload = inicio;
 
+  function orientacion(evt){
+    document.getElementById("log").innerHTML = "Orientación del dispositivo:<br> Alpha: " + evt.alpha.toFixed(0) + "º, Beta: " + evt.beta.toFixed(0) + "º, Gamma: " + evt.gamma.toFixed(0) + "º";
+    //document.getElementById("log").innerHTML = e.alpha;
+  }
   function handleStart(evt) {
     evt.preventDefault();
     document.getElementById("log").innerHTML = "Touchstart " + evt.touches[0].pageX +" "+evt.touches[0].pageY ;
@@ -33,7 +37,3 @@ function inicio() {
       alert('click');
   }
 
-  function orientacion(evt){
-    document.getElementById("log").innerHTML = "Orientación del dispositivo:<br> Alpha: " + evt.alpha.toFixed(0) + "º, Beta: " + evt.beta.toFixed(0) + "º, Gamma: " + evt.gamma.toFixed(0) + "º";
-    //document.getElementById("log").innerHTML = e.alpha;
-  }
